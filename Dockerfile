@@ -15,8 +15,9 @@ RUN mkdir -p /var/lib/ganglia && \
     chmod 777 /var/lib/ganglia
 
 ADD supervisord.conf /etc/supervisord.conf
+ADD resolv.conf /etc/resolv.conf
 RUN yum install -y python-setuptools && \
-    /usr/bin/easy_install supervisor-4.2.5 && \
+    /usr/bin/easy_install supervisor && \
     yum clean all
 
 RUN yum install -y vim && \
