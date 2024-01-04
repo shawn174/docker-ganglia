@@ -1,4 +1,4 @@
-FROM centos:7
+yFROM centos:7
 MAINTAINER shawn174 shawn.stephens@gmail.com
 
 RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
@@ -16,7 +16,7 @@ RUN mkdir -p /var/lib/ganglia && \
 
 ADD supervisord.conf /etc/supervisord.conf
 RUN yum install -y python-setuptools && \
-    pip supervisor && \
+    /usr/bin/easy_install supervisor && \
     yum clean all
 
 RUN yum install -y vim && \
