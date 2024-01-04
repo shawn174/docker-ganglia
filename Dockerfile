@@ -1,7 +1,7 @@
 FROM centos:7
-MAINTAINER wlu wlu@linkernetworks.com
+MAINTAINER shawn174 shawn.stephens@gmail.com
 
-RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
 RUN yum install -y php-common php-cli php-gb php
 
@@ -20,7 +20,7 @@ RUN yum install -y python-setuptools && \
     yum clean all
 
 RUN yum install -y vim && \
-    ln -f -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+    ln -f -s /usr/share/zoneinfo/America/Chicago /etc/localtime
 
 ADD ganglia.conf /etc/httpd/conf.d/ganglia.conf
 
