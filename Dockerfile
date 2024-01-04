@@ -1,4 +1,4 @@
-yFROM centos:7
+FROM centos:7
 MAINTAINER shawn174 shawn.stephens@gmail.com
 
 RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
